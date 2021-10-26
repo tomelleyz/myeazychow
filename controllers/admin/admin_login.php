@@ -4,7 +4,7 @@
 
   // Check if user is already logged in, if yes then redirect to admin index page
   if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true && isset($_SESSION["is_admin"]) && $_SESSION["is_admin"] === true) {
-    header("Location: ../admin/index.php");
+    header("Location: ../admin/");
     exit;
   }
 
@@ -37,7 +37,7 @@
       $_SESSION["job_title"] = $admin_record["job_title"];
 
       // Redirect to admin home page after successful login
-      header('Location: ../admin/index.php');
+      header('Location: ../admin/');
       exit;
     } else {
       echo "<h1>Invalid login credentials</h1>";
