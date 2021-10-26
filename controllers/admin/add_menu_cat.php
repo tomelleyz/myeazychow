@@ -20,10 +20,10 @@
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
-      if (!file_exists("uploads/" . $filename)){
+      if (!file_exists("../uploads/" . $filename)){
         move_uploaded_file($tempname, $folder);
-        $add_menu_cat_msg = "New menu category added!";
       }
+      $add_menu_cat_msg = "New menu category added!";
   
     } else {
       $add_menu_cat_msg = "Failed to add menu category.";
